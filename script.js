@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ------------------------------
-       Grab everything we need first
-    --------------------------------*/
+   
 
     const menuBtn = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector(".nav");
@@ -18,28 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.querySelector(".footer-form form");
 
-
-    /* ------------------------------
-       Mobile Hamburger Toggle
-       Just opens and closes menu
-    --------------------------------*/
-
     menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("open");
         navMenu.classList.toggle("open");
     });
 
 
-    /* ------------------------------
-       Scroll Reveal Animations
-       This gives that startup feel
-    --------------------------------*/
-
     const revealOnScroll = () => {
 
         const triggerBottom = window.innerHeight * 0.85;
 
-        // About section slides in from left
+        
         if (
             aboutText &&
             aboutText.getBoundingClientRect().top < window.innerHeight - 100
@@ -47,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutText.classList.add("reveal");
         }
 
-        // Services stagger animation
+        
         serviceCards.forEach((card, index) => {
             if (
                 !card.classList.contains("reveal-up") &&
@@ -58,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Testimonials stagger animation
+       
         testimonialCards.forEach((card, index) => {
             if (
                 !card.classList.contains("reveal-up") &&
@@ -69,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Footer sections fade up one by one
+
         footerSections.forEach((section, index) => {
             if (
                 section.getBoundingClientRect().top < window.innerHeight - 50
@@ -81,14 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // run once on load
+    revealOnScroll();
 
-
-    /* ------------------------------
-       Smooth Scrolling
-       Makes navigation feel premium
-    --------------------------------*/
-
+    
     document.querySelectorAll('a[href^="#"]').forEach(link => {
 
         link.addEventListener("click", function (e) {
@@ -98,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetId = this.getAttribute("href");
             let section;
 
-            // Booking buttons always go to footer
+        
             if (
                 targetId === "#contact" ||
                 targetId === "#book" ||
@@ -122,12 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-
-    /* ------------------------------
-       Ripple Effect for Buttons
-       Makes it feel like real product
-    --------------------------------*/
 
     const allButtons = document.querySelectorAll(
         ".btn, .btn-primary, .btn-secondary, .btn-cta, .footer-form button"
@@ -153,12 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-
-    /* ------------------------------
-       Hero Parallax Effect
-       Subtle depth = luxury feel
-    --------------------------------*/
-
     if (hero) {
         hero.addEventListener("mousemove", (e) => {
 
@@ -169,12 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
             heroContent.style.transform = `translate(${-x}px, ${-y}px)`;
         });
     }
-
-
-    /* ------------------------------
-       Form Validation Animation
-       Elegant shake instead of ugly popup
-    --------------------------------*/
 
     if (form) {
 
@@ -192,14 +156,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     input.classList.add("input-error");
                     isValid = false;
 
-                    // Remove shake after animation
+                
                     setTimeout(() => {
                         input.classList.remove("input-error");
                     }, 500);
                 }
             });
 
-            // If everything is filled properly
+        
             if (isValid) {
 
                 alert("Appointment request submitted successfully!");
@@ -209,9 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-/* =========================
-   TESTIMONIAL CAROUSEL
-========================= */
 
 const slides = document.querySelectorAll('.testimonial-slide');
 const nextBtn = document.querySelector('.next');
@@ -221,7 +182,6 @@ const dotsContainer = document.querySelector('.dots');
 let currentIndex = 0;
 let interval;
 
-// Create dots
 slides.forEach((_, index) => {
     const dot = document.createElement('span');
     dot.addEventListener('click', () => showSlide(index));
@@ -265,6 +225,6 @@ const slider = document.querySelector('.testimonial-slider');
 slider.addEventListener('mouseenter', stopAutoSlide);
 slider.addEventListener('mouseleave', startAutoSlide);
 
-// Initialize
+
 dots[0].classList.add('active');
 startAutoSlide();
