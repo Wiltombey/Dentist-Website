@@ -102,16 +102,16 @@ body {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: #1493c5; /* White lines for visibility */
+  background-color: #1493c5; 
   transition: background-color 0.3s ease;
 }
 
 .menu-toggle:hover span {
-  background-color: #00bcd4; /* Accent color on hover */
+  background-color: #00bcd4; 
 }
 
 .menu-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Light hover background */
+  background-color: rgba(255, 255, 255, 0.1); 
 }
 
 
@@ -251,7 +251,7 @@ body {
 }
 
 
-/* On mobile, adjust image further */
+
 @media (max-width: 768px) {
   .hero-image img {
     max-width: 70%;
@@ -383,14 +383,14 @@ h1, h2, h3 {
   animation: fadeIn 1.5s ease;
 }
 
-/* Initial state */
+
 .about-text {
   opacity: 0;
   transform: translateX(-50px);
   transition: all 0.8s ease;
 }
 
-/* When visible */
+
 .about-text.reveal {
   opacity: 1;
   transform: translateX(0);
@@ -771,13 +771,12 @@ body::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Service Card Hover Effect */
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(20, 80, 122, 0.15);
 }
 
-/* Makes the button inside the card change color on hover */
 .service-card:hover .btn {
   background-color: #00bcd4;
   color: #fff;
@@ -810,7 +809,7 @@ body::before {
   background: #14507a;
 }
 
-/* Testimonials Section Styles */
+
 .testimonials-section {
   padding: 80px 20px;
   background-color: #f8f9fa;
@@ -840,12 +839,10 @@ body::before {
   width: 320px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.07);
   text-align: left;
-  /* Animation state */
   opacity: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Testimonial Card Hover Effect */
 .testimonial-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(0, 188, 212, 0.15);
@@ -866,12 +863,12 @@ body::before {
   transition: color 0.3s ease;
 }
 
-/* Makes the author's name change color on hover */
+
 .testimonial-card:hover .testimonial-author h4 {
   color: #00bcd4;
 }
 
-/* General Animation Keyframe */
+
 @keyframes fadeUp {
   0% { 
     opacity: 0; 
@@ -882,9 +879,7 @@ body::before {
     transform: translateY(0); 
   }
 }
-/* =========================
-   TESTIMONIAL SLIDER
-========================= */
+
 
 .testimonial-slider {
   position: relative;
@@ -927,7 +922,6 @@ body::before {
   font-weight: 600;
 }
 
-/* Arrows */
 .prev,
 .next {
   position: absolute;
@@ -951,7 +945,7 @@ body::before {
 .prev { left: -50px; }
 .next { right: -50px; }
 
-/* Dots */
+
 .dots {
   margin-top: 20px;
   text-align: center;
