@@ -24,8 +24,6 @@ and a realistic business layout.
 * HTML5
 * CSS3
 * JavaScript (Vanilla)
-* React
-* Python
 
 
 ## Future Improvements
