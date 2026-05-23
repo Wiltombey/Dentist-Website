@@ -27,7 +27,6 @@ and a realistic business layout.
 * React
 * Python
 
-This is a frontend-only project. The contact form is not connected to a backend.
 
 ## Future Improvements
 
