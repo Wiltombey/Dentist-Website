@@ -24,6 +24,7 @@ and a realistic business layout.
 * HTML5
 * CSS3
 * JavaScript (Vanilla)
+* React
 
 This is a frontend-only project. The contact form is not connected to a backend.
 
